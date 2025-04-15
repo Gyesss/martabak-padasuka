@@ -5,10 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Martabak Padasuka</title>
     <link rel="stylesheet" href="/src/output.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+   <style type="text/tailwindcss">
+@theme {
+  --color-nabeel: rgb(51, 153, 102);
+  --color-fio: rgb(0, 51, 51);
+  --color-randi: rgb(247, 224, 15);
+}
+
+@keyframes scrollBounce {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: scrollBounce 30s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.bg-radial-pattern {
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.05) 50%,
+    transparent 0%
+  );
+  background-repeat: repeat;
+  background-color: theme("--color-nabeel");
+}
+    </style>
   </head>
 
   <body class="bg-nabeel font-sans text-white">
