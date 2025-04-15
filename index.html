@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Martabak Padasuka</title>
+    <link rel="stylesheet" href="/src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body class="bg-nabeel font-sans text-white">
+    <header
+      class="bg-nabeel fixed top-0 left-0 z-50 w-screen bg-[radial-gradient(circle,_rgba(0,0,0,0.05)_50%,_transparent_0%)] shadow-2xl shadow-black/30"
+    >
+      <div
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4"
+      >
+        <div class="flex items-center space-x-3">
+          <i class="fas fa-cookie-bite text-randi text-3xl"></i>
+          <span class="text-xl font-bold tracking-wide">Martabak Padasuka</span>
+        </div>
+
+        <button
+          id="hamburger"
+          class="text-randi text-2xl focus:outline-none md:hidden"
+          aria-label="Toggle menu"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <nav
+          class="hidden items-center space-x-8 text-sm font-medium text-white md:flex"
+        >
+          <a href="#menu" class="hover:text-randi transition-colors">Menu</a>
+          <a href="#testimoni" class="hover:text-randi transition-colors"
+            >Testimoni</a
+          >
+          <a href="#lokasi" class="hover:text-randi transition-colors"
+            >Lokasi</a
+          >
+          <a href="#kontak" class="hover:text-randi transition-colors"
+            >Kontak</a
+          >
+        </nav>
+
+        <div class="hidden md:block">
+          <a
+            href="#pesan"
+            class="bg-randi text-fio inline-block animate-bounce rounded-lg px-4 py-2 font-semibold italic shadow-lg transition-transform duration-200 hover:rotate-1"
+          >
+            Pesan Sekarang
+          </a>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="flex max-h-0 flex-col space-y-2 overflow-hidden px-4 text-sm font-medium text-white transition-[max-height] duration-500 ease-in-out md:hidden"
+      >
+        <a href="#menu" class="hover:text-randi transition-colors">Menu</a>
+        <a href="#testimoni" class="hover:text-randi transition-colors"
+          >Testimoni</a
+        >
+        <a href="#lokasi" class="hover:text-randi transition-colors">Lokasi</a>
+        <a href="#kontak" class="hover:text-randi transition-colors">Kontak</a>
+      </div>
+    </header>
+
+    <section class="bg-nabeel relative text-white">
+      <div
+        class="absolute top-0 left-0 h-full w-full bg-cover bg-fixed bg-center"
+        style="background-image: url(&quot;/assets/img/martabak2c.jpg&quot;)"
+      ></div>
+
+      <div
+        class="relative z-10 flex min-h-screen items-center justify-center px-6 py-8 text-center"
+      >
+        <div class="space-y-6">
+          <h1
+            class="text-4xl leading-tight font-bold tracking-wide md:text-6xl"
+          >
+            Selamat Datang di Martabak Padasuka
+          </h1>
+
+          <p class="text-fio text-lg font-medium md:text-2xl">
+            Semua pasti pada suka! Nikmati martabak lezat dengan beragam rasa
+            yang menggugah selera.
+          </p>
+        </div>
+      </div>
+      <div class="absolute inset-x-0 bottom-0 z-0">
+        <img src="assets/img/layered-waves.svg" alt="" class="w-screen" />
+      </div>
+    </section>
+
+    <section class="bg-fio relative px-6 text-white">
+      <div class="relative z-10 space-y-4 text-center">
+        <h3 class="text-3xl font-semibold">🎉 Promo Spesial Akhir Hayat!</h3>
+        <p class="text-lg text-gray-300 sm:text-xl">
+          Diskon pembelian terbatas, beli 1 gratis 1.000 hingga diabetes! Promo
+          berakhir dalam:
+        </p>
+
+        <div
+          class="flex justify-center gap-6 font-mono text-lg font-bold text-gray-700 sm:text-2xl"
+          id="countdown"
+        >
+          <div class="flex flex-col items-center">
+            <span class="text-4xl sm:text-5xl" id="days">00</span>
+            <span class="text-sm text-gray-300">Hari</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-4xl sm:text-5xl" id="hours">00</span>
+            <span class="text-sm text-gray-300">Jam</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-4xl sm:text-5xl" id="minutes">00</span>
+            <span class="text-sm text-gray-300">Menit</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <span class="text-4xl sm:text-5xl" id="seconds">00</span>
+            <span class="text-sm text-gray-300">Detik</span>
+          </div>
+        </div>
+
+        <div class="mt-6">
+          <a
+            href="#pesan"
+            class="bg-randi text-fio inline-block transform rounded-lg px-8 py-3 text-xl font-semibold shadow-xl transition-all duration-200 hover:scale-105 hover:shadow-2xl active:scale-95"
+          >
+            Pesan Sekarang
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="bg-fio px-6 py-16 text-white sm:px-12">
+      <h2 class="mb-8 text-center text-4xl font-bold">Menu Kami</h2>
+
+      <div
+        class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3"
+      >
+        <div
+          class="text-fio transform rounded-lg bg-white p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+        >
+          <img
+            src="assets/img/martabak1.png"
+            alt="Martabak Manis Original"
+            class="mb-4 h-40 w-full rounded-lg object-contain"
+          />
+          <h3 class="mb-4 text-2xl font-semibold">Martabak Manis Original</h3>
+          <p class="mb-4 text-lg">
+            Martabak tebal dengan topping klasik seperti cokelat, keju, kacang,
+            dan wijen. Tekstur empuk, rasa autentik!
+          </p>
+          <span class="text-randi text-xl font-bold">Rp 30.000</span>
+        </div>
+        <div
+          class="text-fio transform rounded-lg bg-white p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+        >
+          <img
+            src="assets/img/martabak1a.png"
+            alt="Martabak Manis Premium"
+            class="mb-4 h-40 w-full rounded-lg object-contain"
+          />
+          <h3 class="mb-4 text-2xl font-semibold">Martabak Manis Premium</h3>
+          <p class="mb-4 text-lg">
+            Tersedia topping spesial seperti Nutella, Ovomaltine, Oreo, dan
+            KitKat. Cocok buat kamu pecinta martabak kekinian!
+          </p>
+          <span class="text-randi text-xl font-bold">Rp 40.000</span>
+        </div>
+
+        <div
+          class="text-fio transform rounded-lg bg-white p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+        >
+          <img
+            src="assets/img/martabak1b.png"
+            alt="Martabak Telur Spesial"
+            class="mb-4 h-40 w-full rounded-lg object-contain"
+          />
+          <h3 class="mb-4 text-2xl font-semibold">Martabak Telur Spesial</h3>
+          <p class="mb-4 text-lg">
+            Isi daging cincang, daun bawang, dan telur bebek pilihan. Disajikan
+            dengan acar segar dan sambal rahasia!
+          </p>
+          <span class="text-randi text-xl font-bold">Rp 35.000</span>
+        </div>
+
+        <div
+          class="text-fio transform rounded-lg bg-white p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+        >
+          <img
+            src="assets/img/martabak2.png"
+            alt="Mini Martabak (MiniBite)"
+            class="mb-4 h-40 w-full rounded-lg object-contain"
+          />
+          <h3 class="mb-4 text-2xl font-semibold">Mini Martabak (MiniBite)</h3>
+          <p class="mb-4 text-lg">
+            Versi kecil dari martabak manis dengan topping campuran dalam satu
+            box. Cocok buat cemilan ramean!
+          </p>
+          <span class="text-randi text-xl font-bold">Rp 25.000</span>
+        </div>
+
+        <div
+          class="text-fio transform rounded-lg bg-white p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+        >
+          <img
+            src="assets/img/martabak3.png"
+            alt="Martabak Setengah Matang"
+            class="mb-4 h-40 w-full rounded-lg object-contain"
+          />
+          <h3 class="mb-4 text-2xl font-semibold">Martabak Setengah Matang</h3>
+          <p class="mb-4 text-lg">
+            Buat kamu yang suka martabak setengah lembek dan lumer. Banyak yang
+            suka, loh!
+          </p>
+          <span class="text-randi text-xl font-bold">Rp 28.000</span>
+        </div>
+
+        <div
+          class="text-fio transform rounded-lg bg-white p-6 shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+        >
+          <img
+            src="assets/img/martabak4.png"
+            alt="Martabak Kacang"
+            class="mb-4 h-40 w-full rounded-lg object-contain"
+          />
+          <h3 class="mb-4 text-2xl font-semibold">Martabak Kacang</h3>
+          <p class="mb-4 text-lg">
+            Topping kacang tanah gurih yang berpadu dengan gula merah, membuat
+            martabak ini unik dan lezat!
+          </p>
+          <span class="text-randi text-xl font-bold">Rp 32.000</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimoni" class="bg-fio px-6 py-16 text-white sm:px-12">
+      <h2 class="mb-8 text-center text-4xl font-bold">Apa Kata Pelanggan?</h2>
+
+      <div class="overflow-hidden">
+        <div class="animate-marquee flex gap-12">
+          <div
+            class="text-fio w-96 flex-shrink-0 transform rounded-lg bg-white p-8 shadow-lg transition-all hover:scale-105"
+          >
+            <div class="relative mb-6 flex items-center gap-6">
+              <div class="h-24 w-24 overflow-hidden rounded-full bg-gray-200">
+                <div class="relative h-full w-full">
+                  <img
+                    src="assets/img/churchill.jpg"
+                    alt="Foto Churchill"
+                    class="h-full w-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-l from-white to-transparent opacity-60"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <p class="mb-4 text-lg">⭐⭐⭐⭐⭐</p>
+                <p class="mb-4 text-lg">
+                  "Rasanya bikin nostalgia! Martabak manisnya lembut dan lumer
+                  banget."
+                </p>
+                <span class="font-bold">Churchill, London</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="text-fio w-96 flex-shrink-0 transform rounded-lg bg-white p-8 shadow-lg transition-all hover:scale-105"
+          >
+            <div class="relative mb-6 flex items-center gap-6">
+              <div class="h-24 w-24 overflow-hidden rounded-full bg-gray-200">
+                <div class="relative h-full w-full">
+                  <img
+                    src="assets/img/franklin.jpg"
+                    alt="Foto Franklin"
+                    class="h-full w-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-l from-white to-transparent opacity-60"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <p class="mb-4 text-lg">⭐⭐⭐⭐⭐</p>
+                <p class="mb-4 text-lg">
+                  "Pesan online, sampai rumah masih hangat! Porsinya juga bikin
+                  puas."
+                </p>
+                <span class="font-bold">Franklin, Washington, D.C.</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="text-fio w-96 flex-shrink-0 transform rounded-lg bg-white p-8 shadow-lg transition-all hover:scale-105"
+          >
+            <div class="relative mb-6 flex items-center gap-6">
+              <div class="h-24 w-24 overflow-hidden rounded-full bg-gray-200">
+                <div class="relative h-full w-full">
+                  <img
+                    src="assets/img/hirohito.jpg"
+                    alt="Foto Hirohito"
+                    class="h-full w-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-l from-white to-transparent opacity-60"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <p class="mb-4 text-lg">⭐⭐⭐⭐⭐</p>
+                <p class="mb-4 text-lg">
+                  "Suka banget sama topping Ovomaltinenya. Gak pelit topping!"
+                </p>
+                <span class="font-bold">Hirohito, Tokyo</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="text-fio w-96 flex-shrink-0 transform rounded-lg bg-white p-8 shadow-lg transition-all hover:scale-105"
+          >
+            <div class="relative mb-6 flex items-center gap-6">
+              <div class="h-24 w-24 overflow-hidden rounded-full bg-gray-200">
+                <div class="relative h-full w-full">
+                  <img
+                    src="assets/img/hitler.jpg"
+                    alt="Foto Hitler"
+                    class="h-full w-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-l from-white to-transparent opacity-60"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <p class="mb-4 text-lg">⭐⭐⭐⭐☆</p>
+                <p class="mb-4 text-lg">
+                  "Martabak telurnya juara sih. Sambalnya nendang banget."
+                </p>
+                <span class="font-bold"
+                  >Hitler, <del>Germania</del> Berlin</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="text-fio w-96 flex-shrink-0 transform rounded-lg bg-white p-8 shadow-lg transition-all hover:scale-105"
+          >
+            <div class="relative mb-6 flex items-center gap-6">
+              <div class="h-24 w-24 overflow-hidden rounded-full bg-gray-200">
+                <div class="relative h-full w-full">
+                  <img
+                    src="assets/img/mussolini.jpg"
+                    alt="Foto Mussolini"
+                    class="h-full w-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-l from-white to-transparent opacity-60"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <p class="mb-4 text-lg">⭐⭐⭐⭐⭐</p>
+                <p class="mb-4 text-lg">
+                  "Martabaknya enak banget! Toppingnya sesuai dengan selera
+                  aku."
+                </p>
+                <span class="font-bold">Mussolini, Roma</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="text-fio w-96 flex-shrink-0 transform rounded-lg bg-white p-8 shadow-lg transition-all hover:scale-105"
+          >
+            <div class="relative mb-6 flex items-center gap-6">
+              <div class="h-24 w-24 overflow-hidden rounded-full bg-gray-200">
+                <div class="relative h-full w-full">
+                  <img
+                    src="assets/img/stalin.jpg"
+                    alt="Foto Stalin"
+                    class="h-full w-full object-cover"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-l from-white to-transparent opacity-60"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <p class="mb-4 text-lg">⭐⭐⭐⭐⭐</p>
+                <p class="mb-4 text-lg">
+                  "Harganya terjangkau dan rasanya luar biasa. Beli lagi, deh!"
+                </p>
+                <span class="font-bold">Stalin, Moskow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="lokasi"
+      class="relative bg-cover bg-fixed bg-center px-6 py-20"
+      style="background-image: url(&quot;assets/img/martabak2a.jpg&quot;)"
+    >
+      <div class="bg-opacity-60 absolute inset-0 bg-black"></div>
+      <div class="relative z-10 mx-auto max-w-3xl text-center text-white">
+        <h2 class="mb-4 text-4xl font-bold">Lokasi Kami</h2>
+        <p class="mb-6">Jl. Martabak Manis No.99, Bandung, Jawa Barat</p>
+        <p class="mb-6">
+          <i class="fa fa-map-marker-alt mr-2"></i>Kami buka setiap hari 16.00 –
+          23.00 WIB
+        </p>
+        <a
+          href="https://www.google.com/maps?q=Bandung"
+          target="_blank"
+          class="text-fio inline-block rounded-lg bg-white px-6 py-3 font-bold shadow transition hover:bg-gray-200"
+        >
+          Buka di Google Maps
+        </a>
+      </div>
+    </section>
+
+    <section id="kontak" class="bg-fio px-6 py-20 text-white">
+      <div
+        class="mx-auto max-w-4xl rounded-2xl bg-white/10 p-10 shadow-lg backdrop-blur-sm"
+      >
+        <h2 class="mb-8 text-center text-3xl font-bold">Hubungi Kami</h2>
+        <form class="space-y-6">
+          <div>
+            <label class="mb-1 block font-semibold">Nama</label>
+            <input
+              type="text"
+              class="text-fio w-full rounded-lg bg-white px-4 py-2 placeholder:text-gray-400"
+              placeholder="Nama Anda"
+              required
+            />
+          </div>
+          <div>
+            <label class="mb-1 block font-semibold">Email</label>
+            <input
+              type="email"
+              class="text-fio w-full rounded-lg bg-white px-4 py-2 placeholder:text-gray-400"
+              placeholder="Email Anda"
+              required
+            />
+          </div>
+          <div>
+            <label class="mb-1 block font-semibold">Pesan</label>
+            <textarea
+              class="text-fio w-full rounded-lg bg-white px-4 py-2 placeholder:text-gray-400"
+              placeholder="Pesan Anda"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <div class="text-center">
+            <button
+              type="submit"
+              class="text-fio rounded-lg bg-white px-8 py-3 font-bold shadow transition hover:bg-gray-200"
+            >
+              Kirim Pesan
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="border-t border-white/10 bg-[#0e0e0e] px-6 py-10 text-white">
+      <div
+        class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row"
+      >
+        <div class="text-center md:text-left">
+          <h3 class="text-fio text-2xl font-bold">Martabak Padasuka</h3>
+          <p class="text-sm text-gray-400">© 2025 Semua Hak Dilindungi</p>
+        </div>
+        <div class="flex space-x-6 text-xl">
+          <a href="#" class="hover:text-fio transition"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="hover:text-fio transition"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="#" class="hover:text-fio transition"
+            ><i class="fab fa-whatsapp"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

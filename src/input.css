@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-nabeel: rgb(51, 153, 102);
+  --color-fio: rgb(0, 51, 51);
+  --color-randi: rgb(247, 224, 15);
+}
+
+@keyframes scrollBounce {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: scrollBounce 30s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.bg-radial-pattern {
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.05) 50%,
+    transparent 0%
+  );
+  background-repeat: repeat;
+  background-color: theme("--color-nabeel");
+}
